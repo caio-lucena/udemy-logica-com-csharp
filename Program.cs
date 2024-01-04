@@ -7,17 +7,15 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
-            string name = "Caio";
-            byte age = 33;
-            double height = 1.78;
-            double salary = 6500.0;
-            double bonus = 11350.57;
-            double total = salary + bonus;
+            Console.Write("Digite o nome de 3 frutas separadas por espaço: ");
+            string frutas = Console.ReadLine();
+            string [] listaDeFrutas = frutas.Split(" ");
 
-            Console.WriteLine(height.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Dados do indivíduo: \n" + "Nome: " + name + "\nIdade: " + age + "\nAltura: " + height);
-            Console.WriteLine("Total recebido no mês de dezembro: R$ " + total.ToString("F2",CultureInfo.InvariantCulture));
-
+            for(int i = 0; i < listaDeFrutas.Length; i++)
+            {
+                Console.WriteLine("Item n° " + (1 + i) + ", " + listaDeFrutas[i]);
+            }
+            
         }
     }
 }
