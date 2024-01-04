@@ -7,14 +7,16 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite o nome de 3 frutas separadas por espaço: ");
-            string frutas = Console.ReadLine();
-            string [] listaDeFrutas = frutas.Split(" ");
+            Console.Write("Digite seu nome: ");
+            string name = Console.ReadLine(); 
 
-            for(int i = 0; i < listaDeFrutas.Length; i++)
-            {
-                Console.WriteLine("Item n° " + (1 + i) + ", " + listaDeFrutas[i]);
-            }
+            Console.Write("\nDigite sua idade: ");
+            int age = int.Parse(Console.ReadLine());
+
+            Console.Write("\nDigite sua altura: ");
+            double height = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Nome: " + name + ", idade " + age + ", altura " + height.ToString("F1",CultureInfo.InvariantCulture));
             
         }
     }
