@@ -1,4 +1,7 @@
-﻿// resolução do exercício proposto da aula 19
+﻿/*
+resolução do exercício proposto da aula 20 (calcular a área de um terreno retangular,
+assim como o seu preço dado o valor do metro quadrado).
+*/
 
 using System;
 using System.Globalization;
@@ -9,26 +12,16 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Entre com o seu nome completo: ");
-            string name = Console.ReadLine();
 
-            Console.WriteLine("Quantos quartos tem na sua casa? ");
-            int numberOfRooms = int.Parse(Console.ReadLine());
-            
-            Console.WriteLine("Entre com o preço de um produto: ");
-            double productPrice = double.Parse(Console.ReadLine());
+            double width = double.Parse(Console.ReadLine());
+            double height = double.Parse(Console.ReadLine());
+            double priceSquareMeter = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Entre seu último nome, idade e altura (mesma linha)");
-            string[] vector = Console.ReadLine().Split(' ');
+            double totalArea = width * height;
+            double totalPrice = width * height * priceSquareMeter;
 
-            Console.WriteLine(name);
-            Console.WriteLine(numberOfRooms);
-            Console.WriteLine(productPrice.ToString("F2", CultureInfo.InvariantCulture));
-            
-            for (int i = 0; i < vector.Length; i++)
-            {
-                Console.WriteLine(vector[i]);
-            }
+            Console.WriteLine("ÁREA = " + totalArea.ToString("F1", CultureInfo.InvariantCulture));
+            Console.WriteLine("PREÇO = " + totalPrice.ToString("F1", CultureInfo.InvariantCulture));
 
         }
     }
