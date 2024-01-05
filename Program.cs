@@ -18,7 +18,7 @@ namespace PrimeiroProjeto
             double priceSquareMeter = double.Parse(Console.ReadLine());
 
             double totalArea = width * height;
-            double totalPrice = width * height * priceSquareMeter;
+            double totalPrice = totalArea * priceSquareMeter;
 
             Console.WriteLine("ÁREA = " + totalArea.ToString("F1", CultureInfo.InvariantCulture));
             Console.WriteLine("PREÇO = " + totalPrice.ToString("F1", CultureInfo.InvariantCulture));
